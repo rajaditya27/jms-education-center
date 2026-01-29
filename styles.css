@@ -23,6 +23,9 @@ body {
   max-width: 800px;
   padding: 30px;
 }
+.hero-content{
+  padding-top: 20px;
+}
 
 .hero h1 {
   font-size: 3rem;
