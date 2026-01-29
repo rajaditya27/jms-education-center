@@ -80,3 +80,10 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".fade-up, .fade-in").forEach(el => {
   observer.observe(el);
 });
+const menuToggle = document.querySelector('.menu-toggle');
+const navlinks = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', () => {
+  navlinks.classList.toggle('active');
+});
+

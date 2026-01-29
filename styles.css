@@ -372,6 +372,95 @@ html {
   padding-top: 20px;
 }
 
+/* ===== NAVBAR BASE ===== */
+nav {
+  display: flex;
+  /* justify-content: ; */
+  align-items: center;
+  padding: 14px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(157, 212, 156, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+/* Logo */
+nav .logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Menu links */
+nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+}
+
+/* Links */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* ===== MOBILE NAV ===== */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* @media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #9cf39f;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  } */
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+/* Universal image fix */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hero background fix */
+.hero {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Section images spacing */
+section img {
+  margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 16px;
+  }
+}
+
+
 
 
 
