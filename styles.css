@@ -347,6 +347,28 @@ nav a:hover {
 html {
   scroll-behavior: smooth;
 }
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 160px;   /* pushes content down */
+    padding-bottom: 60px;
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .hero .btn,
+  .hero a {
+    margin-top: 10px;
+  }
+}
+
+.hero-content {
+  padding-top: 20px;
+}
+
 
 
 
