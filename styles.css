@@ -1,0 +1,352 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #aae9c1;
+    color: #11181d;
+    scroll-behavior: smooth;
+}
+
+/* HERO SECTION */
+.hero {
+      background:linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/hero-bg.jpg") center center / cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 30px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgb(182, 242, 199);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 12px;
+    z-index: 1000;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #0a4fa3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #003366;
+}
+
+/* SECTIONS */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* BUTTON */
+.btn {
+    background: #25D366;
+    color: rgb(130, 83, 83);
+    padding: 14px 26px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition:transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #1ebd5a;
+}
+
+
+
+/* ANIMATION */
+.fade-in {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    @media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 20px;
+ }
+}
+}
+@media (max-width: 768px) {
+  .hero .btn,
+  .hero a {
+    margin-top: 10px;
+  }
+}
+
+
+
+
+
+/* Add counter styling  */
+.stats .card {
+    text-align: center;
+}
+
+.stats h3 {
+    font-size: 42px;
+    color: #0a4fa3;
+    margin-bottom: 5px;
+}
+
+.stats p {
+    font-size: 16px;
+    font-weight: 600;
+}
+.nav-link.active {
+    color: #25D366;
+    border-bottom: 2px solid #25D366;
+    padding-bottom: 4px;
+}
+
+/* whatsapp css style  */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ===== Page Load Animations ===== */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+.hero h1,
+.hero p {
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.why-us {
+  padding: 80px 20px;
+  background: #f9fafc;
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.why-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+}
+
+.why-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.enquiry {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  text-align: center;
+  color: #fff;
+}
+
+.enquiry h2 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.enquiry p {
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+  opacity: 0.95;
+}
+
+.enquiry-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-whatsapp,
+.btn-form {
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+}
+
+.btn-form {
+  background: #ffffff;
+  color: #222;
+}
+
+.btn-form:hover {
+  background: #f1f1f1;
+}
+
+.footer {
+  background: #0f2027;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.footer h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.footer p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.footer-info {
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+.footer-copy {
+  margin-top: 25px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
