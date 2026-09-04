@@ -1,0 +1,94 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   Single source of truth. No component file may hardcode a colour, size,
+   radius, shadow or duration — everything resolves back to this file.
+   ========================================================================== */
+
+:root {
+  /* --- Brand: navy ------------------------------------------------------ */
+  --navy-900: #071e35;
+  --navy-800: #0b2c4d; /* primary */
+  --navy-700: #14406b;
+  --navy-600: #1d5a8f;
+  --navy-100: #e7eef5;
+
+  /* --- Accent: gold ----------------------------------------------------- */
+  --gold-400: #ddbb6a;
+  --gold-500: #c8a24a; /* decorative + text ON navy only (2.4:1 on white) */
+  --gold-600: #8a6d1f; /* text-safe on light backgrounds */
+  --gold-100: #f7efdc;
+
+  /* --- Action ----------------------------------------------------------- */
+  --whatsapp: #25d366;
+  --whatsapp-dark: #1ebe5d;
+
+  /* --- Neutral ---------------------------------------------------------- */
+  --surface: #ffffff;
+  --tint: #f5f7fa;
+  --ink: #101820;
+  --ink-muted: #4a5a6a;
+  --border: #e2e8f0;
+  --on-navy: #ffffff;
+  --on-navy-muted: #b9cadb;
+
+  /* --- Type scale (fluid) ----------------------------------------------- */
+  --font-sans: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Arial, sans-serif;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-base: 1rem;
+  --fs-lg: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  --fs-h3: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --fs-h2: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  --fs-h1: clamp(2.125rem, 1.55rem + 2.9vw, 3.5rem);
+  --fs-stat: clamp(2.25rem, 1.8rem + 2vw, 3rem);
+
+  --lh-tight: 1.15;
+  --lh-snug: 1.35;
+  --lh-base: 1.65;
+
+  /* --- Spacing (4px base) ----------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* --- Layout ----------------------------------------------------------- */
+  --container: 1140px;
+  --container-pad: var(--space-5);
+  --nav-h: 72px;
+  --section-y: clamp(3.5rem, 2rem + 6vw, 6rem);
+
+  /* --- Depth ------------------------------------------------------------ */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(7, 30, 53, 0.06),
+    0 2px 8px rgba(7, 30, 53, 0.05);
+  --shadow-md: 0 4px 12px rgba(7, 30, 53, 0.08),
+    0 12px 28px rgba(7, 30, 53, 0.07);
+  --shadow-lg: 0 8px 20px rgba(7, 30, 53, 0.1),
+    0 24px 48px rgba(7, 30, 53, 0.12);
+
+  /* --- Motion ----------------------------------------------------------- */
+  --dur-fast: 150ms;
+  --dur-base: 300ms;
+  --dur-slow: 600ms;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.3, 0.64, 1);
+
+  /* --- Focus ------------------------------------------------------------ */
+  --focus-ring: 0 0 0 3px rgba(200, 162, 74, 0.55);
+
+  --z-nav: 1000;
+  --z-float: 900;
+}

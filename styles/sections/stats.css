@@ -1,0 +1,15 @@
+/* ==========================================================================
+   STATS band
+   ========================================================================== */
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+@media (max-width: 760px) {
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

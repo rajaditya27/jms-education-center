@@ -1,0 +1,165 @@
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: min(88svh, 820px);
+  padding-top: calc(var(--nav-h) + var(--space-12));
+  padding-bottom: var(--space-16);
+  background: var(--navy-900);
+  color: var(--on-navy);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Layer 1 — the photograph.
+   images/hero-bg.jpg is a collage with headlines baked into it, so it is
+   blurred and desaturated into pure texture; the overlay above then carries
+   the contrast. Replace it with a single clean photograph and the blur can
+   be reduced or dropped. */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -6%;
+  z-index: 0;
+  background: url("../../images/hero-bg.jpg") center / cover no-repeat;
+  /* Blur scales with the viewport, or the collage's baked-in text becomes
+     legible again once the image is upscaled on a large screen. */
+  filter: blur(clamp(8px, 0.55vw, 26px)) saturate(0.5) brightness(0.75);
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+/* Layer 2 — navy wash plus the gold glow that anchors the headline. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+      circle at 82% 18%,
+      rgba(200, 162, 74, 0.2),
+      transparent 55%
+    ),
+    linear-gradient(
+      105deg,
+      rgba(7, 30, 53, 0.95) 0%,
+      rgba(11, 44, 77, 0.88) 48%,
+      rgba(7, 30, 53, 0.78) 100%
+    );
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: min(62ch, 100%);
+}
+
+.hero h1 {
+  margin-bottom: var(--space-5);
+}
+
+.hero h1 .accent {
+  color: var(--gold-500);
+}
+
+.hero__lead {
+  max-width: 52ch;
+  margin-bottom: var(--space-8);
+  color: var(--on-navy-muted);
+  font-size: var(--fs-lg);
+}
+
+/* --- Trust strip -------------------------------------------------------- */
+.hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin: var(--space-10) 0 0;
+  padding: var(--space-6) 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  list-style: none;
+}
+
+.hero__trust li {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__trust b {
+  color: var(--gold-500);
+  font-size: var(--fs-h3);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero__trust span {
+  font-size: var(--fs-xs);
+  color: var(--on-navy-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* --- Scroll cue --------------------------------------------------------- */
+.hero__cue {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-6);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  gap: var(--space-2);
+  color: var(--on-navy-muted);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.hero__cue:hover {
+  color: var(--gold-500);
+}
+
+.hero__cue svg {
+  width: 18px;
+  height: 18px;
+  animation: hero-bob 2.2s var(--ease-out) infinite;
+}
+
+@keyframes hero-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--nav-h) + var(--space-16));
+    padding-bottom: var(--space-20);
+    text-align: left;
+  }
+
+  .hero__trust {
+    gap: var(--space-5);
+  }
+
+  .hero__cue {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__cue svg {
+    animation: none;
+  }
+}
