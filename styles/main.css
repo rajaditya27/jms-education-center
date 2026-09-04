@@ -33,3 +33,8 @@
 @import url("sections/enquiry.css");
 @import url("sections/faq.css");
 @import url("sections/contact.css");
+
+/* --- Global responsive scale -------------------------------------------
+   Imported last so its small-screen and large-screen adjustments override
+   the component defaults above. */
+@import url("base/responsive.css");
