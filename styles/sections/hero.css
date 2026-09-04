@@ -26,7 +26,9 @@
   inset: -6%;
   z-index: 0;
   background: url("../../images/hero-bg.jpg") center / cover no-repeat;
-  filter: blur(9px) saturate(0.5) brightness(0.75);
+  /* Blur scales with the viewport, or the collage's baked-in text becomes
+     legible again once the image is upscaled on a large screen. */
+  filter: blur(clamp(8px, 0.55vw, 26px)) saturate(0.5) brightness(0.75);
   transform: scale(1.04);
   pointer-events: none;
 }
