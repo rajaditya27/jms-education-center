@@ -1,0 +1,113 @@
+/* ==========================================================================
+   BUTTON
+   Variants: .btn--primary (navy) · .btn--gold · .btn--whatsapp · .btn--ghost
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.btn--primary {
+  background: var(--navy-800);
+  color: var(--on-navy);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover {
+  background: var(--navy-700);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--gold {
+  background: var(--gold-500);
+  color: var(--navy-900);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--gold:hover {
+  background: var(--gold-400);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--whatsapp {
+  background: var(--whatsapp);
+  color: #06301a;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--whatsapp:hover {
+  background: var(--whatsapp-dark);
+  box-shadow: var(--shadow-md);
+}
+
+/* Outline button — inherits its colour from context */
+.btn--ghost {
+  background: transparent;
+  border-color: currentColor;
+  color: var(--navy-800);
+}
+
+.btn--ghost:hover {
+  background: var(--navy-800);
+  border-color: var(--navy-800);
+  color: var(--on-navy);
+}
+
+.on-dark .btn--ghost {
+  color: var(--on-navy);
+}
+
+.on-dark .btn--ghost:hover {
+  background: var(--on-navy);
+  border-color: var(--on-navy);
+  color: var(--navy-900);
+}
+
+.btn--sm {
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--fs-xs);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.btn-row--center {
+  justify-content: center;
+}

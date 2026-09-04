@@ -1,0 +1,77 @@
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--navy-900);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.lead {
+  font-size: var(--fs-lg);
+  color: var(--ink-muted);
+  line-height: var(--lh-base);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+}
+
+/* On dark (navy) surfaces */
+.on-dark h1,
+.on-dark h2,
+.on-dark h3 {
+  color: var(--on-navy);
+}
+
+.on-dark .lead,
+.on-dark p {
+  color: var(--on-navy-muted);
+}
+
+.on-dark .eyebrow {
+  color: var(--gold-500);
+}
+
+/* Inline text links inside prose */
+.link {
+  color: var(--navy-700);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--gold-500);
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.link:hover {
+  color: var(--navy-900);
+}

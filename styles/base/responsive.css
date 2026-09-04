@@ -1,0 +1,137 @@
+/* ==========================================================================
+   RESPONSIVE SCALE
+   Component and section files own their own layout breakpoints. This file
+   owns the *global* scale — the root font size, container width, gutters and
+   rhythm — so the same design works from a 320px iPhone SE to a 4K TV.
+
+   Because every token is expressed in rem, changing the root font size at the
+   top end scales the entire interface proportionally rather than just
+   stretching a fixed-width column across an enormous screen.
+
+   Imported last from main.css so these adjustments win over the component
+   defaults they refine.
+   ========================================================================== */
+
+/* --- Small phones: iPhone SE / 12 mini / Android compact (320–400px) ----- */
+@media (max-width: 400px) {
+  :root {
+    --container-pad: 1rem;
+    --section-y: 3rem;
+    --fs-h1: clamp(1.875rem, 1.5rem + 2vw, 2.25rem);
+  }
+
+  /* Side-by-side CTAs are cramped below ~400px; stack them full width. */
+  .btn-row .btn {
+    width: 100%;
+  }
+
+  .navbar__name {
+    font-size: 0.8125rem;
+  }
+
+  .card,
+  .testimonial,
+  .contact-card {
+    padding: var(--space-6);
+  }
+
+  .testimonial {
+    padding-top: var(--space-8);
+  }
+
+  .accordion__trigger {
+    padding: var(--space-4) var(--space-5);
+    font-size: var(--fs-sm);
+  }
+
+  .accordion__panel-inner {
+    padding: 0 var(--space-5) var(--space-5);
+  }
+}
+
+/* --- Landscape phones: very short viewports ----------------------------- */
+@media (max-height: 520px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--nav-h) + var(--space-8));
+    padding-bottom: var(--space-10);
+  }
+
+  .hero__cue {
+    display: none;
+  }
+
+  /* A fixed bar eats too much of a short screen. */
+  .navbar {
+    position: absolute;
+  }
+}
+
+/* --- Large laptops and desktops ----------------------------------------- */
+@media (min-width: 1440px) {
+  :root {
+    --container: 1280px;
+  }
+}
+
+@media (min-width: 1680px) {
+  :root {
+    --container: 1400px;
+    --nav-h: 80px;
+  }
+}
+
+/* --- Very large monitors ------------------------------------------------ */
+@media (min-width: 2000px) {
+  html {
+    font-size: 18px;
+  }
+
+  :root {
+    --container: 1600px;
+    --nav-h: 88px;
+  }
+}
+
+/* --- Television / 4K, viewed from a distance ---------------------------- */
+@media (min-width: 2560px) {
+  html {
+    font-size: 21px;
+  }
+
+  :root {
+    --container: 2000px;
+    --nav-h: 96px;
+  }
+
+  .hero {
+    min-height: min(80svh, 1200px);
+  }
+}
+
+@media (min-width: 3400px) {
+  html {
+    font-size: 26px;
+  }
+
+  :root {
+    --container: 2600px;
+  }
+}
+
+/* --- Pointer-coarse devices: give every control a 44px touch target ------ */
+@media (pointer: coarse) {
+  .nav-link,
+  .footer__list a,
+  .contact-card a,
+  .enquiry__direct a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__list a,
+  .enquiry__direct a {
+    display: inline-flex;
+  }
+}

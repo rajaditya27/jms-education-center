@@ -1,0 +1,39 @@
+/* ==========================================================================
+   SECTION HEADING — eyebrow + title + optional lead, with a gold rule
+   ========================================================================== */
+
+.section-head {
+  max-width: min(64ch, 100%);
+  margin-bottom: var(--space-12);
+}
+
+.section-head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-head .eyebrow {
+  margin-bottom: var(--space-3);
+}
+
+.section-head h2 {
+  margin-bottom: var(--space-4);
+}
+
+.section-head h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: var(--space-4);
+  background: var(--gold-500);
+  border-radius: var(--radius-pill);
+}
+
+.section-head--center h2::after {
+  margin-inline: auto;
+}
+
+.section-head .lead {
+  margin-top: var(--space-2);
+}

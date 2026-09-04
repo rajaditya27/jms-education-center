@@ -1,0 +1,110 @@
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.footer {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-8);
+  background: var(--navy-900);
+  color: var(--on-navy-muted);
+  font-size: var(--fs-sm);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+  gap: var(--space-10);
+  padding-bottom: var(--space-10);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer h3,
+.footer h4 {
+  color: var(--on-navy);
+}
+
+.footer h4 {
+  margin-bottom: var(--space-5);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-500);
+}
+
+.footer__brand h3 {
+  margin-bottom: var(--space-3);
+  font-size: var(--fs-h3);
+}
+
+.footer__brand p {
+  max-width: 32ch;
+}
+
+.footer__list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__list a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  transition: color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.footer__list a:hover {
+  color: var(--gold-500);
+  transform: translateX(3px);
+}
+
+.footer__contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  overflow-wrap: anywhere;
+}
+
+.footer__contact svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin-top: 3px;
+  color: var(--gold-500);
+}
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-top: var(--space-6);
+  font-size: var(--fs-xs);
+  color: rgba(185, 202, 219, 0.75);
+}
+
+@media (max-width: 860px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer__bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}

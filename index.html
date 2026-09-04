@@ -1,185 +1,837 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="J.M.S. Education Center provides expert admission guidance and personalized career counselling for students. Enquire today for the right career path.">
-    <meta name="google-site-verification" content="BfLt2D9bEDYo-h4dxgLc4JYSMPbxKCROhmMOfXQYOyc" />
-    <title>J.M.S. Education Center | Admission & Career Counselling </title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- <script src="js/script.js"></script> -->
+    <meta name="theme-color" content="#0b2c4d">
 
+    <title>J.M.S. Education Center | Admission &amp; Career Counselling</title>
+    <meta name="description"
+        content="J.M.S. Education Center provides expert admission guidance and personalized career counselling for students. Enquire today for the right career path.">
+    <meta name="google-site-verification" content="BfLt2D9bEDYo-h4dxgLc4JYSMPbxKCROhmMOfXQYOyc" />
+
+    <!-- Social sharing.
+         TODO: add <link rel="canonical"> and <meta property="og:url"> once the
+         live domain is confirmed, and replace og:image with a 1200x630 image. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="J.M.S. Education Center">
+    <meta property="og:title" content="J.M.S. Education Center | Admission &amp; Career Counselling">
+    <meta property="og:description"
+        content="Expert admission guidance and one-to-one career counselling. 500+ students guided into the right course and college.">
+    <meta property="og:image" content="images/hero-bg.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b2c4d'/%3E%3Ctext x='32' y='41' font-family='Segoe UI,Arial,sans-serif' font-size='22' font-weight='bold' fill='%23c8a24a' text-anchor='middle'%3EJMS%3C/text%3E%3C/svg%3E">
+
+    <link rel="preload" as="image" href="images/hero-bg.jpg">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script>
+        /* Marks that JS is available before first paint, which is what lets the
+           reveal animations hide content at all. The watchdog force-shows every
+           section if the module bundle has not booted shortly after load, so a
+           script failure degrades to a plain page rather than a blank one. */
+        (function () {
+            var root = document.documentElement;
+            root.classList.add('js');
+            window.__revealWatchdog = setTimeout(function () {
+                root.classList.add('reveal-fallback');
+            }, 2500);
+        })();
+    </script>
 </head>
 
 <body>
-<nav>
-    <a href="#home" class="nav-link">Home</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#courses" class="nav-link">Courses</a>
-    <a href="#enquiry" class="nav-link">Enquiry</a>
-    <a href="#contact" class="nav-link">Contact</a>
-</nav>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
+    <!-- ====================================================================
+         NAVBAR
+         ==================================================================== -->
+    <header class="navbar" data-navbar>
+        <div class="navbar__inner">
+            <a class="navbar__brand" href="#home" aria-label="J.M.S. Education Center — home">
+                <span class="navbar__mark" aria-hidden="true">JMS</span>
+                <span>
+                    <span class="navbar__name">J.M.S. Education Center</span>
+                    <span class="navbar__tagline">Admission &amp; Career Counselling</span>
+                </span>
+            </a>
 
-<header class="hero">
-    <div class="hero-content">
-        <h1>J.M.S. Education Center</h1>
-        <p>Trusted Admission Counselling & Career Guidance</p>
-        <a href="#enquiry" class="btn hero-btn">Apply for Counselling</a>
-    </div>
-</header>
+            <button class="navbar__toggle" type="button" data-nav-toggle aria-expanded="false"
+                aria-controls="primary-navigation" aria-label="Toggle navigation menu">
+                <span class="navbar__toggle-bars" aria-hidden="true"></span>
+            </button>
 
+            <ul class="navbar__links" id="primary-navigation" data-nav-panel>
+                <li><a class="nav-link" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#courses">Courses</a></li>
+                <li><a class="nav-link" href="#process">Process</a></li>
+                <li><a class="nav-link" href="#faq">FAQ</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="navbar__links-cta"><a class="btn btn--gold btn--sm btn--block" href="#enquiry">Free Counselling</a></li>
+            </ul>
 
-<section id="home" class="section">
-    <h2>Welcome to J.M.S. Education Center</h2>
-    <p>Your trusted partner for admission counselling and career guidance. <br>
-We help students choose the right course, college, and future.</p>
-</section>
-<section class="why-us">
-  <h2 class="fade-up">Why Choose J.M.S. Education Center?</h2>
+            <a class="btn btn--gold btn--sm navbar__cta" href="#enquiry">Free Counselling</a>
+        </div>
+    </header>
 
-  <div class="why-grid">
-    <div class="why-card fade-up">
-      <h3>Expert Guidance</h3>
-      <p>Experienced counsellors providing accurate admission and career guidance.</p>
-    </div>
+    <main id="main">
 
-    <div class="why-card fade-up">
-      <h3>Personalized Counselling</h3>
-      <p>One-to-one counselling focused on each student’s strengths and goals.</p>
-    </div>
+        <!-- ================================================================
+             HERO
+             ================================================================ -->
+        <section class="hero on-dark" id="home">
+            <div class="container">
+                <div class="hero__content">
+                    <p class="eyebrow reveal">Trusted admission counselling</p>
 
-    <div class="why-card fade-up">
-      <h3>Trusted Support</h3>
-      <p>End-to-end admission support with transparency and student-first approach.</p>
-    </div>
-  </div>
-</section>
+                    <h1 class="reveal">
+                        The right course. The right college.
+                        <span class="accent">The right future.</span>
+                    </h1>
 
-<section id="about" class="section">
-    <h2>About Us</h2>
-    <p>
-        J.M.S. Education Center is a professional admission counselling organization dedicated to helping students achieve their academic goals.
-        <br>
-We provide transparent guidance, personalized counselling, and end-to-end admission support across various universities and colleges.
-    </p>
-</section>
+                    <p class="hero__lead reveal">
+                        One-to-one guidance from counsellors who know the admission process
+                        inside out — from shortlisting colleges to the day you enrol.
+                    </p>
 
-<section id="courses" class="section">
-    <h2>Courses We Guide For</h2>
+                    <div class="btn-row reveal">
+                        <a class="btn btn--gold" href="#enquiry">Book Free Counselling</a>
+                        <a class="btn btn--ghost on-dark" href="https://wa.me/919608535083" target="_blank"
+                            rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.17 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z" />
+                            </svg>
+                            Chat on WhatsApp
+                        </a>
+                    </div>
 
-    <div class="cards">
-        <div class="card">Engineering</div>
-        <div class="card">Medical</div>
-        <div class="card">Pharmacy</div>
-        <div class="card">BCA / MCA</div>
-        <div class="card">BBA / MBA</div>
-        <div class="card">Polytechnic</div>
-        <div class="card">IT & Computer Courses</div>
-    </div>
-</section>
+                    <ul class="hero__trust reveal">
+                        <li><b>500+</b><span>Students guided</span></li>
+                        <li><b>50+</b><span>Partner colleges</span></li>
+                        <li><b>10+</b><span>Years experience</span></li>
+                    </ul>
+                </div>
+            </div>
 
+            <a class="hero__cue" href="#about" aria-label="Scroll to about section">
+                Explore
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </a>
+        </section>
 
-<!-- <section id="enquiry" class="section">
-    <h2>Admission Enquiry</h2>
-    <p><b>Interested in admission guidance?</b>
+        <!-- ================================================================
+             ABOUT + WHY US
+             ================================================================ -->
+        <section class="section why-us" id="about">
+            <div class="container">
+                <div class="section-head section-head--center reveal">
+                    <p class="eyebrow">About us</p>
+                    <h2>Counselling built around the student, not the brochure</h2>
+                    <p class="lead">
+                        J.M.S. Education Center is a professional admission counselling
+                        organization. We give students transparent guidance, personalized
+                        counselling and end-to-end admission support across universities
+                        and colleges.
+                    </p>
+                </div>
 
-<br><b>Click below to fill out our admission enquiry form.
-    <br>Our counsellors will contact you within 24 hours.</b> </p>
-    <a href="PASTE_GOOGLE_FORM_LINK_HERE" class="btn" target="_blank">
-        Admission Enquiry Form
+                <div class="grid grid--3" data-reveal-group>
+                    <article class="card reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="m16 11 2 2 4-4" />
+                            </svg>
+                        </div>
+                        <h3>Expert Guidance</h3>
+                        <p>
+                            Experienced counsellors who track cut-offs, seat matrices and
+                            deadlines, so your decisions rest on current facts rather than
+                            hearsay.
+                        </p>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9" />
+                                <circle cx="12" cy="12" r="4.5" />
+                                <circle cx="12" cy="12" r="1" />
+                            </svg>
+                        </div>
+                        <h3>Personalized Counselling</h3>
+                        <p>
+                            One-to-one sessions that start with the student's marks,
+                            strengths, budget and location — not a generic list of colleges.
+                        </p>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                        </div>
+                        <h3>Support Till Admission</h3>
+                        <p>
+                            Documentation, forms, fee structure and follow-ups — we stay with
+                            the family until the admission is confirmed.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             COURSES
+             ================================================================ -->
+        <section class="section section--tint" id="courses">
+            <div class="container">
+                <div class="section-head section-head--center reveal">
+                    <p class="eyebrow">What we cover</p>
+                    <h2>Courses we guide for</h2>
+                    <p class="lead">
+                        Guidance across professional and technical streams, from entrance
+                        planning to final seat allotment.
+                    </p>
+                </div>
+
+                <div class="courses__grid" data-reveal-group>
+                    <article class="card card--compact reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="7" y="7" width="10" height="10" rx="1.5" />
+                                <path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4" />
+                            </svg>
+                        </div>
+                        <h3>Engineering</h3>
+                    </article>
+
+                    <article class="card card--compact reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 3v6a5 5 0 0 0 10 0V3" />
+                                <path d="M2 3h4M12 3h4" />
+                                <path d="M9 14v2a5 5 0 0 0 10 0v-1" />
+                                <circle cx="19" cy="12" r="2.2" />
+                            </svg>
+                        </div>
+                        <h3>Medical</h3>
+                    </article>
+
+                    <article class="card card--compact reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2.5" y="8" width="19" height="8" rx="4" transform="rotate(-45 12 12)" />
+                                <path d="M8.5 8.5 15.5 15.5" />
+                            </svg>
+                        </div>
+                        <h3>Pharmacy</h3>
+                    </article>
+
+                    <article class="card card--compact reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m8 6-6 6 6 6M16 6l6 6-6 6" />
+                            </svg>
+                        </div>
+                        <h3>BCA / MCA</h3>
+                    </article>
+
+                    <article class="card card--compact reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2.5" y="7" width="19" height="13" rx="2" />
+                                <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+                                <path d="M2.5 12h19" />
+                            </svg>
+                        </div>
+                        <h3>BBA / MBA</h3>
+                    </article>
+
+                    <article class="card card--compact reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M14.7 6.3a4 4 0 0 1 5.3 5.3l-8.4 8.4a2.5 2.5 0 0 1-3.5-3.5l7.7-7.7a1 1 0 0 1 1.4 1.4l-7 7" />
+                                <path d="m3 8 4-4 3 3" />
+                            </svg>
+                        </div>
+                        <h3>Polytechnic</h3>
+                    </article>
+
+                    <article class="card card--compact reveal">
+                        <div class="card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2.5" y="4" width="19" height="12" rx="2" />
+                                <path d="M8 20h8M12 16v4" />
+                            </svg>
+                        </div>
+                        <h3>IT &amp; Computer Courses</h3>
+                    </article>
+                </div>
+
+                <p class="courses__footnote reveal">
+                    Looking for a stream that isn't listed? Ask us — we guide across most
+                    undergraduate and postgraduate programmes.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             PROCESS
+             ================================================================ -->
+        <section class="section" id="process">
+            <div class="container">
+                <div class="section-head section-head--center reveal">
+                    <p class="eyebrow">How it works</p>
+                    <h2>Four steps from enquiry to admission</h2>
+                    <p class="lead">
+                        A clear path, so families always know what happens next and what it
+                        will cost.
+                    </p>
+                </div>
+
+                <ol class="steps" data-reveal-group>
+                    <li class="step reveal">
+                        <span class="step__num" aria-hidden="true">1</span>
+                        <h3>Enquiry</h3>
+                        <p>Share your marks, stream and preferred location. We respond within 24 hours.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step__num" aria-hidden="true">2</span>
+                        <h3>Counselling Session</h3>
+                        <p>A one-to-one session mapping your strengths and goals to realistic options.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step__num" aria-hidden="true">3</span>
+                        <h3>College Shortlisting</h3>
+                        <p>A shortlist with honest fees, placements and eligibility for each choice.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step__num" aria-hidden="true">4</span>
+                        <h3>Admission Support</h3>
+                        <p>Forms, documents and follow-ups handled with you until the seat is confirmed.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             STATS
+             ================================================================ -->
+        <section class="section section--navy on-dark" aria-labelledby="stats-title">
+            <div class="container">
+                <div class="section-head section-head--center reveal">
+                    <h2 id="stats-title">Our track record</h2>
+                </div>
+
+                <div class="stats__grid" data-reveal-group>
+                    <div class="stat reveal">
+                        <span class="stat__value" data-count-to="500" data-suffix="+">0</span>
+                        <span class="stat__label">Students Guided</span>
+                    </div>
+                    <div class="stat reveal">
+                        <span class="stat__value" data-count-to="50" data-suffix="+">0</span>
+                        <span class="stat__label">Partner Colleges</span>
+                    </div>
+                    <div class="stat reveal">
+                        <span class="stat__value" data-count-to="10" data-suffix="+">0</span>
+                        <span class="stat__label">Years Experience</span>
+                    </div>
+                    <div class="stat reveal">
+                        <span class="stat__value" data-count-to="95" data-suffix="%">0</span>
+                        <span class="stat__label">Success Rate</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             TESTIMONIALS
+             ================================================================ -->
+        <section class="section section--tint" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-head section-head--center reveal">
+                    <p class="eyebrow">Student voices</p>
+                    <h2 id="testimonials-title">What students and parents say</h2>
+                </div>
+
+                <div class="testimonials__grid" data-reveal-group>
+                    <figure class="testimonial reveal">
+                        <blockquote class="testimonial__quote">
+                            Replace this with a real quote from a student you guided — what
+                            they were unsure about, and how the counselling helped them decide.
+                        </blockquote>
+                        <figcaption class="testimonial__author">
+                            <span class="testimonial__avatar" aria-hidden="true">?</span>
+                            <span>
+                                <span class="testimonial__name">Student name</span>
+                                <span class="testimonial__meta">Course, College</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="testimonial reveal">
+                        <blockquote class="testimonial__quote">
+                            Replace this with a parent's words — the admission worry they had,
+                            and what the support felt like through the process.
+                        </blockquote>
+                        <figcaption class="testimonial__author">
+                            <span class="testimonial__avatar" aria-hidden="true">?</span>
+                            <span>
+                                <span class="testimonial__name">Parent name</span>
+                                <span class="testimonial__meta">Parent of a student</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="testimonial reveal">
+                        <blockquote class="testimonial__quote">
+                            Replace this with a third quote — ideally about a specific outcome,
+                            such as the college or course the student secured.
+                        </blockquote>
+                        <figcaption class="testimonial__author">
+                            <span class="testimonial__avatar" aria-hidden="true">?</span>
+                            <span>
+                                <span class="testimonial__name">Student name</span>
+                                <span class="testimonial__meta">Course, College</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <p class="placeholder-note reveal">
+                    Placeholder text — swap in real, permitted quotes before publishing.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             ENQUIRY
+             ================================================================ -->
+        <section class="section section--navy on-dark" id="enquiry">
+            <div class="container">
+                <div class="enquiry__layout">
+
+                    <form class="form" data-enquiry-form data-whatsapp="919608535083" novalidate>
+                        <div class="form__row">
+                            <div class="field">
+                                <label for="f-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                                <input id="f-name" name="name" type="text" autocomplete="name"
+                                    placeholder="Your name" required>
+                                <p class="field__error" aria-live="polite"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="f-phone">Mobile number <span class="req" aria-hidden="true">*</span></label>
+                                <input id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel"
+                                    placeholder="10-digit number" required>
+                                <p class="field__error" aria-live="polite"></p>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="f-course">Course of interest <span class="req" aria-hidden="true">*</span></label>
+                            <select id="f-course" name="course" required>
+                                <option value="">Select a course</option>
+                                <option>Engineering</option>
+                                <option>Medical</option>
+                                <option>Pharmacy</option>
+                                <option>BCA / MCA</option>
+                                <option>BBA / MBA</option>
+                                <option>Polytechnic</option>
+                                <option>IT &amp; Computer Courses</option>
+                                <option>Not sure yet</option>
+                            </select>
+                            <p class="field__error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="f-message">Anything we should know?</label>
+                            <textarea id="f-message" name="message"
+                                placeholder="Your marks, preferred location, or any question"></textarea>
+                        </div>
+
+                        <button class="btn btn--whatsapp btn--block" type="submit">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.17 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z" />
+                            </svg>
+                            Send enquiry on WhatsApp
+                        </button>
+
+                        <p class="form__status" data-form-status role="status" aria-live="polite"></p>
+
+                        <p class="form__note">
+                            Your details open a pre-filled WhatsApp message — nothing is stored
+                            on this website.
+                        </p>
+                    </form>
+
+                    <div class="enquiry__aside">
+                        <div class="section-head reveal">
+                            <p class="eyebrow">Admission enquiry</p>
+                            <h2>Talk to a counsellor today</h2>
+                            <p class="lead">
+                                Tell us your marks and what you're considering. We'll come back
+                                within 24 hours with realistic options — the first conversation
+                                costs nothing.
+                            </p>
+                        </div>
+
+                        <div class="enquiry__alt reveal">
+                            <p class="enquiry__alt-title">Prefer another way?</p>
+
+                            <a class="btn btn--ghost on-dark" href="https://forms.gle/kQRzmhXvAdQUCGky7" target="_blank"
+                                rel="noopener">
+                                Fill the enquiry form
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 4h6v6M20 4l-9 9" />
+                                    <path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+                                </svg>
+                            </a>
+
+                            <ul class="enquiry__direct">
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path
+                                            d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z" />
+                                    </svg>
+                                    <a href="tel:+919608535083">+91 96085 35083</a>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <rect x="2.5" y="4.5" width="19" height="15" rx="2" />
+                                        <path d="m3 7 9 6 9-6" />
+                                    </svg>
+                                    <a href="mailto:jmseducationcenter@gmail.com">jmseducationcenter@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             FAQ
+             ================================================================ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="faq__layout">
+
+                    <div class="faq__aside">
+                        <div class="section-head reveal">
+                            <p class="eyebrow">Questions</p>
+                            <h2>Frequently asked</h2>
+                            <p class="lead">
+                                The things families ask us most. If yours isn't here, message us
+                                and we'll answer it directly.
+                            </p>
+                        </div>
+                        <a class="btn btn--primary reveal" href="#enquiry">Ask your question</a>
+                    </div>
+
+                    <div class="accordion" data-accordion data-reveal-group>
+                        <div class="accordion__item reveal">
+                            <h3>
+                                <button class="accordion__trigger" type="button" aria-expanded="false"
+                                    aria-controls="faq-1" id="faq-1-t">
+                                    Is the first counselling session really free?
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                            <div class="accordion__panel" id="faq-1" role="region" aria-labelledby="faq-1-t">
+                                <div class="accordion__panel-inner">
+                                    Yes. The first conversation — understanding your marks, interests
+                                    and options — is free and carries no obligation to continue.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item reveal">
+                            <h3>
+                                <button class="accordion__trigger" type="button" aria-expanded="false"
+                                    aria-controls="faq-2" id="faq-2-t">
+                                    Which colleges and universities do you cover?
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                            <div class="accordion__panel" id="faq-2" role="region" aria-labelledby="faq-2-t">
+                                <div class="accordion__panel-inner">
+                                    We work with 50+ partner colleges and universities across
+                                    engineering, medical, pharmacy, management and computer streams.
+                                    Tell us your preferred location and we'll share the options that
+                                    genuinely fit your profile.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item reveal">
+                            <h3>
+                                <button class="accordion__trigger" type="button" aria-expanded="false"
+                                    aria-controls="faq-3" id="faq-3-t">
+                                    What does the counselling cost?
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                            <div class="accordion__panel" id="faq-3" role="region" aria-labelledby="faq-3-t">
+                                <div class="accordion__panel-inner">
+                                    Charges depend on the level of support you need. Whatever applies
+                                    to your case is explained upfront in the first session — there
+                                    are no surprise fees later.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item reveal">
+                            <h3>
+                                <button class="accordion__trigger" type="button" aria-expanded="false"
+                                    aria-controls="faq-4" id="faq-4-t">
+                                    How long does the admission process take?
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                            <div class="accordion__panel" id="faq-4" role="region" aria-labelledby="faq-4-t">
+                                <div class="accordion__panel-inner">
+                                    It depends on the stream and the counselling calendar. We map the
+                                    key dates for your specific case in the first session so nothing
+                                    is missed.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item reveal">
+                            <h3>
+                                <button class="accordion__trigger" type="button" aria-expanded="false"
+                                    aria-controls="faq-5" id="faq-5-t">
+                                    What documents should I keep ready?
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                            <div class="accordion__panel" id="faq-5" role="region" aria-labelledby="faq-5-t">
+                                <div class="accordion__panel-inner">
+                                    Typically your 10th and 12th marksheets, entrance scorecard,
+                                    transfer and migration certificates, category certificate if
+                                    applicable, ID proof and passport photographs. We share an exact
+                                    checklist for your chosen college.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item reveal">
+                            <h3>
+                                <button class="accordion__trigger" type="button" aria-expanded="false"
+                                    aria-controls="faq-6" id="faq-6-t">
+                                    Can you help with admissions in other states?
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                            <div class="accordion__panel" id="faq-6" role="region" aria-labelledby="faq-6-t">
+                                <div class="accordion__panel-inner">
+                                    Yes. We guide students applying outside their home state,
+                                    including the eligibility, domicile and documentation differences
+                                    that catch families out.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item reveal">
+                            <h3>
+                                <button class="accordion__trigger" type="button" aria-expanded="false"
+                                    aria-controls="faq-7" id="faq-7-t">
+                                    How do I get started?
+                                    <span class="accordion__icon" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                            <div class="accordion__panel" id="faq-7" role="region" aria-labelledby="faq-7-t">
+                                <div class="accordion__panel-inner">
+                                    Send the enquiry form on this page or message us on WhatsApp with
+                                    your marks and preferred stream. A counsellor responds within 24
+                                    hours.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             CONTACT
+             ================================================================ -->
+        <section class="section section--tint" id="contact">
+            <div class="container">
+                <div class="section-head section-head--center reveal">
+                    <p class="eyebrow">Get in touch</p>
+                    <h2>Contact us</h2>
+                </div>
+
+                <div class="contact__grid" data-reveal-group>
+                    <div class="contact-card reveal">
+                        <div class="contact-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z" />
+                            </svg>
+                        </div>
+                        <h3>Phone &amp; WhatsApp</h3>
+                        <a href="tel:+919608535083">+91 96085 35083</a>
+                    </div>
+
+                    <div class="contact-card reveal">
+                        <div class="contact-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2.5" y="4.5" width="19" height="15" rx="2" />
+                                <path d="m3 7 9 6 9-6" />
+                            </svg>
+                        </div>
+                        <h3>Email</h3>
+                        <a href="mailto:jmseducationcenter@gmail.com">jmseducationcenter@gmail.com</a>
+                    </div>
+
+                    <div class="contact-card reveal">
+                        <div class="contact-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <h3>Visit us</h3>
+                        <p>J.M.S. Education Center<br>Admission Counselling Center</p>
+                    </div>
+
+                    <div class="contact-card reveal">
+                        <div class="contact-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v5l3.2 1.9" />
+                            </svg>
+                        </div>
+                        <h3>Office hours</h3>
+                        <p>Monday – Saturday<br>10:00 AM – 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====================================================================
+         FOOTER
+         ==================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <h3>J.M.S. Education Center</h3>
+                    <p>
+                        Expert admission and career counselling — helping students choose the
+                        right course, the right college and the right future.
+                    </p>
+                </div>
+
+                <nav class="footer__nav" aria-label="Footer">
+                    <h4>Quick links</h4>
+                    <ul class="footer__list">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#enquiry">Enquiry</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer__list footer__contact">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>Admission Counselling Center</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path
+                                    d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z" />
+                            </svg>
+                            <a href="tel:+919608535083">+91 96085 35083</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2.5" y="4.5" width="19" height="15" rx="2" />
+                                <path d="m3 7 9 6 9-6" />
+                            </svg>
+                            <a href="mailto:jmseducationcenter@gmail.com">jmseducationcenter@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; <span data-current-year>2026</span> J.M.S. Education Center. All Rights Reserved.</p>
+                <p>Admission &amp; Career Counselling</p>
+            </div>
+        </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/919608535083" target="_blank" rel="noopener"
+        aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+                d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.17 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z" />
+        </svg>
     </a>
-</section> -->
 
-<!-- <section class="section">
-    <h2>Why Choose J.M.S. Education Center?</h2>
-    
-    <div class="cards">
-        <div class="card">✔ Experienced Counsellors</div>
-        <div class="card">✔ Transparent Admission Process</div>
-        <div class="card">✔ Personalized Career Guidance</div>
-        <div class="card">✔ Support Till Admission</div>
-    </div>
-</section> -->
-<!-- Add counter html -->
-<section class="section fade-in" id="stats">
-    <h2>Our Achievements</h2>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "J.M.S. Education Center",
+      "description": "Admission counselling and career guidance for students across engineering, medical, pharmacy, management and computer courses.",
+      "telephone": "+91-9608535083",
+      "email": "jmseducationcenter@gmail.com",
+      "openingHours": "Mo-Sa 10:00-18:00",
+      "areaServed": "IN"
+    }
+    </script>
 
-    <div class="cards stats">
-        <div class="card">
-            <h3 class="counter" data-target="500">0</h3>
-            <p>Students Guided</p>
-        </div>
-
-        <div class="card">
-            <h3 class="counter" data-target="50">0</h3>
-            <p>Partner Colleges</p>
-        </div>
-
-        <div class="card">
-            <h3 class="counter" data-target="10">0</h3>
-            <p>Years Experience</p>
-        </div>
-
-        <div class="card">
-            <h3 class="counter" data-target="95">0</h3>
-            <p>Success Rate (%)</p>
-        </div>
-    </div>
-</section>
-<section class="enquiry" id="enquiry">
-  <h2 class="fade-up">Admission Enquiry</h2>
-  <p class="fade-up">
-    Get expert guidance for admissions and career planning.  
-    Connect with us today.
-  </p>
-
-  <div class="enquiry-buttons fade-up">
-    <a href="https://wa.me/919608535083" target="_blank" class="btn-whatsapp">
-      WhatsApp Enquiry
-    </a>
-
-    <a href="https://forms.gle/kQRzmhXvAdQUCGky7" target="_blank" class="btn-form">
-      Fill Enquiry Form
-    </a>
-  </div>
-</section>
-
-
-
-<!-- <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>
-        📍 J.M.S. Education Center<br>
-        📞 Phone: +91-9608535083<br>
-        📧 Email: jmssducation@gmail.com<br>
-        ⏰ 10:00 AM – 6:00 PM
-    </p>
-</section> -->
-<script src="script.js"></script>
-<a href="https://wa.me/919608535083" 
-   class="whatsapp-float" 
-   target="_blank" 
-   aria-label="Chat on WhatsApp">
-    💬
-</a>
-<footer class="footer">
-  <div class="footer-content">
-    <h3>J.M.S. Education Center</h3>
-    <p>Expert Admission & Career Counselling</p>
-
-    <div class="footer-info">
-      <p>📍 Admission Counselling Center</p>
-      <p>📞 +91 9263032800</p>
-      <p>✉️ jmseducationcenter@gmail.com</p>
-    </div>
-
-    <p class="footer-copy">
-      © 2026 J.M.S. Education Center. All Rights Reserved.
-    </p>
-  </div>
-</footer>
-
-
+    <script type="module" src="js/main.js"></script>
 </body>
+
 </html>
