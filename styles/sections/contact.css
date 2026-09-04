@@ -1,0 +1,72 @@
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-6);
+}
+
+.contact-card {
+  display: grid;
+  /* Rows must not stretch to fill the tallest card, or every card's heading
+     lands at a different height. */
+  align-content: start;
+  gap: var(--space-3);
+  padding: var(--space-8);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-500);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card__icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: var(--space-2);
+  background: var(--navy-100);
+  border-radius: var(--radius-sm);
+  color: var(--navy-800);
+}
+
+.contact-card__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contact-card h3 {
+  font-size: var(--fs-base);
+}
+
+.contact-card a,
+.contact-card p {
+  color: var(--ink-muted);
+  font-size: var(--fs-sm);
+  /* The email address is a single long token — let it break rather than
+     spill out of the card. */
+  overflow-wrap: anywhere;
+}
+
+.contact-card a {
+  font-weight: 600;
+  color: var(--navy-700);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.contact-card a:hover {
+  color: var(--gold-600);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

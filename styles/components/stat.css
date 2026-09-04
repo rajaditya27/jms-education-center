@@ -1,0 +1,36 @@
+/* ==========================================================================
+   STAT — animated counters (js/modules/counters.js)
+   ========================================================================== */
+
+.stat {
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color var(--dur-base) var(--ease-out),
+    background-color var(--dur-base) var(--ease-out);
+}
+
+.stat:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--gold-500);
+}
+
+.stat__value {
+  display: block;
+  font-size: var(--fs-stat);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--gold-500);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat__label {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--on-navy-muted);
+  letter-spacing: 0.02em;
+}

@@ -1,0 +1,35 @@
+/* ==========================================================================
+   J.M.S. Education Center — stylesheet entry point
+   The only stylesheet linked from index.html. Import order matters:
+   tokens -> reset -> typography -> utilities -> components -> sections
+   ========================================================================== */
+
+/* --- Base --------------------------------------------------------------- */
+@import url("base/tokens.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+@import url("base/utilities.css");
+
+/* --- Components --------------------------------------------------------- */
+@import url("components/button.css");
+@import url("components/card.css");
+@import url("components/navbar.css");
+@import url("components/section-head.css");
+@import url("components/accordion.css");
+@import url("components/form.css");
+@import url("components/stat.css");
+@import url("components/step.css");
+@import url("components/testimonial.css");
+@import url("components/floating-cta.css");
+@import url("components/footer.css");
+
+/* --- Sections ----------------------------------------------------------- */
+@import url("sections/hero.css");
+@import url("sections/why-us.css");
+@import url("sections/courses.css");
+@import url("sections/process.css");
+@import url("sections/stats.css");
+@import url("sections/testimonials.css");
+@import url("sections/enquiry.css");
+@import url("sections/faq.css");
+@import url("sections/contact.css");
